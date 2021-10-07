@@ -14,24 +14,32 @@ const UserSchema = mongoose.Schema({
 const Wqs = mongoose.model('Wqs', UserSchema)
 
 // 5、查询users表的数据
-Wqs.find({}, function (err, doc) {
-    if (err) {
-        console.log(err);
-        return
-    }
-    // console.log(doc);
-})
+// Wqs.find({}, function (err, doc) {
+//     if (err) {
+//         console.log(err);
+//         return
+//     }
+//     // console.log(doc);
+// })
 
 // 6、增加数据，1、实例化Model,通过实例化Wqs Molde创建增加数据.2、实例.save()
-const u = new Wqs({
-    name: 'jorden',
-    age: 60
-})
+// const u = new Wqs({
+//     name: 'jorden',
+//     age: 60
+// })
 
-u.save(function (err) {
+// u.save(function (err) {
+//     if (err) {
+//         console.log(err);
+//         return
+//     }
+//     console.log('添加成功');
+// })//执行增加操作
+
+// 7、修改数据
+Wqs.updateOne({ name: "科比" }, { age: 41 }, function (err, doc) {
     if (err) {
-        console.log(err);
-        return
+        return console.log(err);
     }
-    console.log('添加成功');
-})//执行增加操作
+    console.log("更新成功");
+})
