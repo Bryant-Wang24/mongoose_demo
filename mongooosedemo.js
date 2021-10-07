@@ -19,5 +19,19 @@ Wqs.find({}, function (err, doc) {
         console.log(err);
         return
     }
-    console.log(doc);
+    // console.log(doc);
 })
+
+// 6、增加数据，1、实例化Model,通过实例化Wqs Molde创建增加数据.2、实例.save()
+const u = new Wqs({
+    name: 'jorden',
+    age: 60
+})
+
+u.save(function (err) {
+    if (err) {
+        console.log(err);
+        return
+    }
+    console.log('添加成功');
+})//执行增加操作
