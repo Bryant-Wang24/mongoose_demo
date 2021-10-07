@@ -37,7 +37,15 @@ const Wqs = mongoose.model('Wqs', UserSchema)
 // })//执行增加操作
 
 // 7、修改数据
-Wqs.updateOne({ name: "科比" }, { age: 41 }, function (err, doc) {
+// Wqs.updateOne({ name: "科比" }, { age: 41 }, function (err, doc) {
+//     if (err) {
+//         return console.log(err);
+//     }
+//     console.log("更新成功");
+// })
+
+// 8、删除数据
+Wqs.deleteOne({ name: "科比" }, function (err, doc) {
     if (err) {
         return console.log(err);
     }
