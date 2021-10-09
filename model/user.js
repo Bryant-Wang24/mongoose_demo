@@ -8,6 +8,9 @@ const UserSchema = mongoose.Schema({
     age: Number,
     redirect: {
         type: String,
+
+        //还有一个get方法就不介绍了，用的很少，也不建议使用
+
         set(parmas) {//增加数据的时候对redirect字段进行处理
             if (!parmas) {//parmas可以获取redirect的值
                 return ''
