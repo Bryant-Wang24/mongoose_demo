@@ -11,7 +11,7 @@ UserModel.find({}, function (err, doc) {
 
 // 增加数据
 const user = new UserModel({
-    name: "李四666",
+    name: "     张三666        ",//添加的数据有空格
     age: 40
 })
 user.save(function (err) {
