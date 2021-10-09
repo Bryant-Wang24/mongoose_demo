@@ -12,7 +12,8 @@ UserModel.find({}, function (err, doc) {
 // 增加数据
 const user = new UserModel({
     name: "     张三666        ",//添加的数据有空格
-    age: 40
+    age: 40,
+    redirect: 'https://www.baidu.com'
 })
 user.save(function (err) {
     if (err) {
