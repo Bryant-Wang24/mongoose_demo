@@ -3,6 +3,7 @@ const mongoose = require('./db.js')
 const UserSchema = mongoose.Schema({
     name: {
         type: String,
+        index: true,//给name开启索引
         trim: true//定义mongoose修饰符，会自动去掉name的空格
     },
     age: Number,
