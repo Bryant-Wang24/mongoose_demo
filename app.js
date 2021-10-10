@@ -1,25 +1,33 @@
 const UserModel = require('./model/user.js')
 
 // 查询数据
-UserModel.find({}, function (err, doc) {
-    if (err) {
-        console.log(err);
-        return
-    }
-    console.log(doc);
-})
+// UserModel.find({}, function (err, doc) {
+//     if (err) {
+//         console.log(err);
+//         return
+//     }
+//     console.log(doc);
+// })
 
 // 增加数据
-const user = new UserModel({
-    name: "张三666",//添加的数据有空格
-    age: 40,
-    redirect: 'https://www.baidu.com'
-})
-user.save(function (err) {
+// const user = new UserModel({
+//     name: "curry",//添加的数据有空格
+//     age: 40,
+//     sn: '123456',
+//     redirect: 'https://www.baidu.com'
+// })
+// user.save(function (err) {
+//     if (err) {
+//         console.log(err);
+//         return
+//     }
+// })
+
+UserModel.findBySn('123456', function (err, data) {
     if (err) {
-        console.log(err);
-        return
+        return console.log(err);
     }
+    console.log(data);
 })
 
 
