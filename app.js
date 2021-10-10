@@ -13,25 +13,26 @@ const UserModel = require('./model/user.js')
 const user = new UserModel({
     name: "curry",//添加的数据有空格
     age: 40,
-    sn: '123456',
+    sn: 'sn12000',
+    status: 'err',
     redirect: 'https://www.baidu.com'
 })
-user.print()//自定义的实例方法
+// user.print()//自定义的实例方法
 
 
-// user.save(function (err) {
-//     if (err) {
-//         console.log(err);
-//         return
-//     }
-// })
-
-UserModel.findBySn('123456', function (err, data) {
+user.save(function (err) {
     if (err) {
-        return console.log(err);
+        console.log(err);
+        return
     }
-    console.log(data);
 })
+
+// UserModel.findBySn('123456', function (err, data) {
+//     if (err) {
+//         return console.log(err);
+//     }
+//     console.log(data);
+// })
 
 
 
