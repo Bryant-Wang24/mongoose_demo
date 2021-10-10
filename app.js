@@ -10,12 +10,15 @@ const UserModel = require('./model/user.js')
 // })
 
 // 增加数据
-// const user = new UserModel({
-//     name: "curry",//添加的数据有空格
-//     age: 40,
-//     sn: '123456',
-//     redirect: 'https://www.baidu.com'
-// })
+const user = new UserModel({
+    name: "curry",//添加的数据有空格
+    age: 40,
+    sn: '123456',
+    redirect: 'https://www.baidu.com'
+})
+user.print()//自定义的实例方法
+
+
 // user.save(function (err) {
 //     if (err) {
 //         console.log(err);

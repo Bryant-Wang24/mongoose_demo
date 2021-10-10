@@ -42,4 +42,11 @@ UserSchema.statics.findBySn = function (sn, cb) {
     })
 }
 
+// 示例方法（用的很少）
+UserSchema.methods.print = function () {
+    console.log('我是一个实例方法');
+    console.log(this);
+}
+
+
 module.exports = mongoose.model('Wqs', UserSchema, 'wqs')
